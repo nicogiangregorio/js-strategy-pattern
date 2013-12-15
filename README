@@ -1,0 +1,3 @@
+JAVASCRIPT STRATEGY PATTERN
+===========================
+So many times I need a strategy pattern implementation for js objects, in order to have diffferent behaviours for similar objects. so I decided to publish this code, as a reminder.

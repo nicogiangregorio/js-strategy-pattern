@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Testing strategy pattern with JS</title>
+	<script type="text/javascript" src="strategy.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+			var dummyObjectA = {typeofobj: "TypeA"};
+			var dummyObjectAA = {typeofobj: "TypeAA"};
+			var dummyObjectB = {typeofobj: "TypeB"};
+			var dummyObjectC = {};
+
+			STRATEGY_CONTEXT.evaluate(dummyObjectA);
+			STRATEGY_CONTEXT.evaluate(dummyObjectAA);
+			STRATEGY_CONTEXT.evaluate(dummyObjectB);
+			STRATEGY_CONTEXT.evaluate(dummyObjectC);
+
+			dummyObjectA.leftClickProcessor.printMessage('sample');
+			dummyObjectAA.leftClickProcessor.printMessage('sample');
+			dummyObjectB.leftClickProcessor.printMessage('sample');
+			dummyObjectC.leftClickProcessor.printMessage('sample');
+
+		}
+	</script>
+</head>
+<body>
+<div id='sample'>
+	
+</div>
+</body>
+</html>
