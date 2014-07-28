@@ -5,21 +5,17 @@
 	<script type="text/javascript" src="strategy.js"></script>
 	<script type="text/javascript">
 		window.onload = function() {
-			var dummyObjectA = {typeofobj: "TypeA"};
-			var dummyObjectAA = {typeofobj: "TypeAA"};
-			var dummyObjectB = {typeofobj: "TypeB"};
-			var dummyObjectC = {};
+			
+			var typeAObj = new TypeA();
+			var typeBObj = new TypeB();
+			
+			var clickProcessor = new ClickProcessor(typeAObj);
+			typeAObj.leftClick();
+			typeAObj.rightClick();
 
-			STRATEGY_CONTEXT.evaluate(dummyObjectA);
-			STRATEGY_CONTEXT.evaluate(dummyObjectAA);
-			STRATEGY_CONTEXT.evaluate(dummyObjectB);
-			STRATEGY_CONTEXT.evaluate(dummyObjectC);
-
-			dummyObjectA.leftClickProcessor.printMessage('sample');
-			dummyObjectAA.leftClickProcessor.printMessage('sample');
-			dummyObjectB.leftClickProcessor.printMessage('sample');
-			dummyObjectC.leftClickProcessor.printMessage('sample');
-
+			clickProcessor = new ClickProcessor(typeBObj);
+			typeBObj.leftClick();
+			typeBObj.rightClick();
 		}
 	</script>
 </head>
